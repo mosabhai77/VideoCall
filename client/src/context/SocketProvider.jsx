@@ -9,7 +9,7 @@ export const useSocket = () => {
 };
 
 export const SocketProvider = (props) => {
-  const socket = useMemo(() => io("https://videoserver-lbev.onrender.com"), []);
+  const socket = useMemo(() => io('https://videoserver-lbev.onrender.com'), []);
 
   return (
     <SocketContext.Provider value={socket}>
