@@ -7,9 +7,9 @@ export const useSocket = () => {
   const socket = useContext(SocketContext);
   return socket;
 };
-
+const PORT=process.env.PORT || 8000;
 export const SocketProvider = (props) => {
-  const socket = useMemo(() => io('https://videoserver-lbev.onrender.com'), []);
+  const socket = useMemo(() => io(PORT), []);
 
   return (
     <SocketContext.Provider value={socket}>
